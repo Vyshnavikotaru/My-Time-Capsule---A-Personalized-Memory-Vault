@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Time Capsule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<header>
+    <div class="title-block">
+        <h1>⏳ My Time Capsule</h1>
+        <p class="tagline">A Personalized Memory Vault</p>
+    </div>
+    <nav>
+        <a href="#add-memory">Add Memory</a>
+        <a href="#view-memories">View Memories</a>
+    </nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+</header>
+
+<main>
+<section id="add-memory">
+    <h2>✨ Add a New Memory</h2>
+    <form id="memory-form">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="description" placeholder="Write your memory..." required></textarea>
+        <select id="category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Personal">Personal</option>
+            <option value="Goal">Goal</option>
+            <option value="Message">Message</option>
+        </select>
+        <input type="date" id="unlock-date" required>
+        <button type="submit">💾 Save Memory</button>
+    </form>
+</section>
+
+<section id="view-memories">
+    <h2>📜 Saved Memories</h2>
+
+    <!-- Search & Filter -->
+    <div class="filter-container">
+        <input type="text" id="search-input" placeholder="🔍 Search by title...">
+        <select id="filter-category">
+            <option value="all">All Categories</option>
+            <option value="Personal">Personal</option>
+            <option value="Goal">Goal</option>
+            <option value="Message">Message</option>
+        </select>
+    </div>
+
+    <div id="memory-list" class="card-container"></div>
+</section>
+</main>
+
+<footer>
+    <p>My Time Capsule — All Rights Reserved © <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
